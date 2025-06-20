@@ -1,0 +1,61 @@
+financial_research_task:
+
+  description: >
+    Conduct a thorough research on company {company},focusing primarily on:
+
+     1. Current company status and financial health.
+
+     2. Historical and current financial performance of company.
+
+     3. Major challenges faced in past and present and probably in future and opportunities to scale business and maximize overall profits.
+
+     4. Recent news and events.
+
+     5. Outlooks, future projections, and potential scaling and developments.
+
+    Make sure to organize your findings in a very clear structured format with a dedicated section for each.
+
+  expected_output: >
+    
+    A well crafted and a comprehensive research document with well-organized and well-wriiten sections
+
+    covering all the aspects mentioned for {company}. Include specific facts, figures
+
+    and example use cases, example usages, and example outcomes wherever suitable, relevant and necessary.
+
+  agent: financial_researcher
+
+financial_analysis_task:
+
+  description: >
+    Analyze the research findings and draft a comprehensive report on {company}.
+
+    The report should:
+
+    1. Begin with a executive summary.
+
+    2. Include all key information from the research conducted.
+
+    3. Provide insightful analysis of company's financial trends and financial patterns.
+
+    4. Present a clear market outlook or projection for the company, 
+
+       also including a disclaimer that one's own reearch should be conducted before leveraging the presented information
+
+       for trading and investment decisions.
+
+    5. Be structured and formatted in very professional, easy-to-read style with clear headings.
+
+  expected_output: >
+    A well-polished, professional report on {company} that delivers the research findings
+
+    with added financial analysis and insights. The report should be well-structured with 
+
+    an executive summary, main sections and conclusion.
+
+  agent: financial_analyst
+
+  context:
+    - financial_research_task
+
+  output_file: output/financial_analysis_report.md  
